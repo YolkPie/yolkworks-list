@@ -17,7 +17,7 @@ module.exports = {
   // 如果您的应用程序部署在子路径中，则需要在这指定子路径
   // 例如：https://www.foobar.com/my-app/
   // 需要将它改为'/my-app/'
-  publicPath: isProd ? '/' : '/',
+  publicPath: isProd ? process.env.PUBLIC_PATH : '/',
   // 如果你不需要使用eslint，把 lintOnSave 设为false即可
   lintOnSave: true,
   // 提供了一个 webpack 原始配置的上层抽象，
