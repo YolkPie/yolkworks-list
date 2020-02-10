@@ -1,0 +1,44 @@
+.item {
+  padding: 0 10px;
+  box-sizing: border-box;
+  &__inner {
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+    background: #fff;
+    transition: transform .3s ease;
+    box-shadow: 0 8px 24px rgba(163, 177, 191, .35);
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-6px);
+    }
+  }
+  &__snapshot {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    transition: all .3s ease;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+
+  &__name {
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    padding: 10px;
+    color: #333;
+    border-top: 1px solid #eee;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

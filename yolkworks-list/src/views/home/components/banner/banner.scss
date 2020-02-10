@@ -1,0 +1,22 @@
+.banner {
+  height: 380px;
+  color: #fff;
+  text-align: center;
+  background-color: #ffa043;
+  &__inner {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 42px;
+    line-height: 60px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-size: 30px;
+    font-weight: normal;
+  }
+}

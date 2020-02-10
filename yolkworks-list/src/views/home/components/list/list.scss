@@ -1,0 +1,35 @@
+.list {
+  padding-bottom: 40px;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__item {
+    flex: 0 0 25%;
+    width: 25%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .list {
+    &__item {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .list {
+    &__item {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 50%;
+    }
+  }
+}
