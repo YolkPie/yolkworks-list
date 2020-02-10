@@ -18,7 +18,7 @@
           <div class="detail__main">
               <pre class="detail__code">
                 <p># 命令行方式</p>
-                <p>$ npm i -g yolkworks</p>
+                <p>$ npm i -g @yolkpie/yolkworks</p>
                 <p>$ cd src/components</p>
                 <p>$ yolkworks add @yolkpie/{{this.$route.params.id}}</p>
               </pre>
