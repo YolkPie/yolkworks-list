@@ -11,6 +11,8 @@
           <div class="detail__main">
             <a class="detail__link"
                :href="`https://github.com/YolkPie/${info.type}-materials/tree/master/${info.materialType}/${this.name}`">查看代码</a>
+                           <a class="detail__link"
+               :href="`http://yolkpie.net/yolkworks-preview/#${info.type}-${info.materialType}-${this.name}`">功能预览</a>
           </div>
         </div>
         <div class="detail__info">

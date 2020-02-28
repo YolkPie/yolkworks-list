@@ -54,7 +54,7 @@ module.exports = function extractTarball({
         let filename = path.basename(realPath);
         filename = formatFilename ? formatFilename(filename) : filename;
 
-        const destPath = path.join(destDir, path.dirname(realPath), filename);
+        const destPath = path.join(destDir, path.dirname(realPath), filename).replace(/\\/g, '/');
         const needCreateDir = path.dirname(destPath);
         if (!directoryCollector.includes(needCreateDir)) {
           directoryCollector.push(needCreateDir);

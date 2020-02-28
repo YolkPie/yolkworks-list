@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // 开始对指定 path 递归查找深度为 deep 深度
 function getIndexOfPathByDeep(obj, dir, curDir, deep) {
-  let curPath = path.join(dir, curDir);
+  let curPath = path.join(dir, curDir).replace(/\\/g, '/');
   // 达到搜索深度，停止
   if(deep) {
     if (curDir.toLowerCase().indexOf('package.json') !== -1) {
@@ -41,6 +41,6 @@ module.exports = function (dir, deep = 4) {
   let dirDevide = dir.split('/');
   let preDir = dirDevide.splice(0, dirDevide.length - 1).join('/');
   let index = {};
-  getIndexOfPathByDeep(index, path.join(__dirname, preDir), dirDevide[0], deep + 1);
+  getIndexOfPathByDeep(index, path.join(__dirname, preDir).replace(/\\/g, '/'), dirDevide[0], deep + 1);
   return index;
 }
