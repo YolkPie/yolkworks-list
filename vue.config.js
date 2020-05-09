@@ -4,6 +4,7 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const loading = require('./src/components/pre-render-loading')
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier')
 const GetTempListPlugin = require('./getTempListPlugin')
+const SentryWebpackPlugin = require('@sentry/webpack-plugin')
 // const pkg = require('./package.json')
 
 const resolvePath = dir => path.join(__dirname, dir)
@@ -98,6 +99,16 @@ module.exports = {
           test: new RegExp('\\.(' + ['js', 'css'].join('|') + ')$'),
           threshold: 8192,
           minRatio: 0.8
+        })
+      )
+      // 自动上传sourcemap文件到sentry
+      config.plugins.push(
+        new SentryWebpackPlugin({
+          include: './dist',
+          ignoreFile: '.sentrycliignore',
+          ignore: ['node_modules', 'vue.config.js'],
+          configFile: 'sentry.properties',
+          release: 'yolkworks-list-source-map' // 仅仅是sourcemap的名字
         })
       )
       // 生成sw文件，构建离线应用
