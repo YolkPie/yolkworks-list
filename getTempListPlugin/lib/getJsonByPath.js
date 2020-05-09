@@ -21,7 +21,7 @@ function getIndexOfPathByDeep(obj, dir, curDir, deep) {
       }
     } else {
       // 排除指定文件
-      const exceptions = ['readme', 'src', 'license']
+      const exceptions = ['readme', 'src', 'license', '.idea', '.vscode']
       for (let i = 0; i < exceptions.length; i++) {
         if (curDir.toLowerCase().indexOf(exceptions[i]) !== -1) return
       }
