@@ -32,7 +32,7 @@ const tempList = {
    * @param temp
    */
   getTempInfo (type, materialType, temp) {
-    if (this.list && this.list[type] && this.list[type][materialType] && this.list[type][materialType]) {
+    if (this.list && this.list[type] && this.list[type][materialType] && this.list[type][materialType][temp]) {
       return this.list[type][materialType][temp]
     }
     return {}
