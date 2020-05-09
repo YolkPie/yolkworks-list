@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^5.15.5",
+    "@sentry/cli": "^1.52.3",
     "@sentry/integrations": "^5.15.5",
     "@sentry/webpack-plugin": "^1.11.1",
     "@yolkpie/utils": "^1.0.2",

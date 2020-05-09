@@ -4,4 +4,4 @@ token=4f9328ecf819464a913c421bd084023593e026168aad40c4a2ba690799d77b19
 [defaults]
 url=https://sentry.io/
 org=yolkpie
-project=yolkworks-list
+project=yolkpie
