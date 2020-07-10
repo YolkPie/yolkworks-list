@@ -19,7 +19,9 @@ const tempList = {
       const temps = []
       subTypes.forEach(subtype => {
         Object.keys(this.list[type][subtype]).forEach(tempName => {
-          temps.push(this.list[type][subtype][tempName])
+          if (subtype === 'blocks') {
+            temps.push(this.list[type][subtype][tempName])
+          }
         })
       })
       return temps
