@@ -49,7 +49,7 @@
     "request-progress": "^3.0.0",
     "sass-loader": "^8.0.0",
     "serve": "^11.2.0",
-    "tar": "^2.0.0",
+    "tar": "^4.4.15",
     "validate-commit-msg": "^2.14.0",
     "vue-server-renderer": "^2.6.11",
     "vue-template-compiler": "^2.6.10",
